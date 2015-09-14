@@ -8,12 +8,6 @@ angular.module('app', ['ui.bootstrap'])
             width: 100
         };
 
-        $http.post(ENDPOINT, {operation:'ping'}).
-        then(function(response) {
-            console.log('Response: ' + response);
-            $dialogs.notify(JSON.stringify(response));
-        })
-
         $scope.ready = function() {
             $scope.loading = false;
         };
